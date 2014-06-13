@@ -55,11 +55,9 @@ $(document).ready(function(){
     " - Rs." + $( "#slider-range" ).slider( "values", 1 ) );
 
   /*Ondate - ReturnDate datepicker*/
-  $("#ondate,#returndate").datepicker({
-      changeMonth:true,
-      changeYear:true,
-      showOn:'focus',
-      dateFormat:'dd-M-yy'
+  $("#ondate,#returndate").datetimepicker({
+      format:'d-M-Y H:i',
+      step:15
     }).click(function () { $(this).focus(); });
 
   /*From place - To place dropdown*/
