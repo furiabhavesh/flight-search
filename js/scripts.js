@@ -87,15 +87,9 @@ $(document).ready(function(){
     from = $("#from").val();
     to = $("#to").val();
 
-    /*break date from dd-mm-yyyy to long format*/
-    dd = $("#ondate").val().split("-")[0];
-    mmm = $("#ondate").val().split("-")[1];
-    yyyy = $("#ondate").val().split("-")[2];
-    //alert(Date.parse(dd+"-"+mmm+"-"+yyyy, "d-MMM-yyyy"));
-
-    ondate = $("#ondate").val();
+    ondate = Date.parse($("#ondate").val(), "d-MMM-yyyy HH:mm")
     if(travel_type == "roundtrip"){
-      returndate = $("#returndate").val();
+      returndate = Date.parse($("#returndate").val(), "d-MMM-yyyy HH:mm");
     }
     fromprice = $("#slider-range").slider("values", 0);
     toprice = $("#slider-range").slider("values", 1);
